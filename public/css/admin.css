@@ -1,0 +1,345 @@
+:root {
+    --admin-brown: #552c1d;
+    --admin-orange: #d56847;
+    --admin-cream: #fff8ed;
+    --admin-text: #33261f;
+    --admin-muted: #796b62;
+    --admin-border: #eadfd4;
+    --admin-background: #f7f2ec;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body.admin-body {
+    min-height: 100vh;
+    margin: 0;
+    padding: 36px 20px;
+    background: var(--admin-background);
+    color: var(--admin-text);
+    font-family: "DM Sans", Arial, sans-serif;
+}
+
+.admin-container {
+    width: min(1120px, 100%);
+    margin: 0 auto;
+}
+
+.form-container {
+    width: min(760px, 100%);
+}
+
+.admin-header,
+.panel-heading,
+.header-actions,
+.row-actions,
+.form-actions {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+}
+
+.admin-header {
+    margin-bottom: 28px;
+}
+
+.admin-header h1,
+.login-card h1 {
+    margin: 10px 0 4px;
+    font-size: clamp(26px, 4vw, 36px);
+}
+
+.admin-header p,
+.login-card > p,
+.panel-heading p {
+    margin: 0;
+    color: var(--admin-muted);
+}
+
+.admin-brand {
+    color: var(--admin-brown);
+    font-size: 20px;
+    font-weight: 800;
+    text-decoration: none;
+}
+
+.admin-brand span {
+    color: var(--admin-orange);
+}
+
+.panel,
+.login-card {
+    padding: 26px;
+    border: 1px solid var(--admin-border);
+    border-radius: 18px;
+    background: #fff;
+    box-shadow: 0 12px 36px rgb(61 41 30 / 7%);
+}
+
+.panel-heading {
+    margin-bottom: 22px;
+}
+
+.panel-heading h2 {
+    margin: 0 0 4px;
+    font-size: 21px;
+}
+
+.button {
+    display: inline-flex;
+    min-height: 42px;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 16px;
+    border: 0;
+    border-radius: 9px;
+    font: inherit;
+    font-weight: 700;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.button-primary {
+    background: var(--admin-brown);
+    color: #fff;
+}
+
+.button-primary:hover {
+    background: var(--admin-orange);
+}
+
+.button-secondary {
+    border: 1px solid var(--admin-border);
+    background: #fff;
+    color: var(--admin-brown);
+}
+
+.button-danger {
+    background: #fff0ed;
+    color: #a63220;
+}
+
+.button-small {
+    min-height: 34px;
+    padding: 7px 10px;
+    font-size: 13px;
+}
+
+.table-wrap {
+    overflow-x: auto;
+}
+
+.product-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+}
+
+.product-table th,
+.product-table td {
+    padding: 14px 12px;
+    border-bottom: 1px solid var(--admin-border);
+    vertical-align: middle;
+}
+
+.product-table th {
+    color: var(--admin-muted);
+    font-size: 12px;
+    letter-spacing: .04em;
+    text-transform: uppercase;
+}
+
+.product-cell {
+    display: flex;
+    min-width: 240px;
+    align-items: center;
+    gap: 12px;
+}
+
+.product-cell p {
+    max-width: 330px;
+    margin: 3px 0 0;
+    color: var(--admin-muted);
+    font-size: 13px;
+}
+
+.product-thumbnail {
+    width: 54px;
+    height: 54px;
+    flex: 0 0 auto;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+.status-badge {
+    display: inline-block;
+    padding: 5px 9px;
+    border-radius: 30px;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.status-available {
+    background: #e8f5e9;
+    color: #256d35;
+}
+
+.status-unavailable {
+    background: #f3ece6;
+    color: #76665b;
+}
+
+.row-actions {
+    justify-content: flex-start;
+}
+
+.row-actions form {
+    margin: 0;
+}
+
+.empty-state {
+    padding: 36px !important;
+    color: var(--admin-muted);
+    text-align: center;
+}
+
+.pagination {
+    padding-top: 18px;
+}
+
+.admin-form {
+    display: grid;
+    gap: 10px;
+}
+
+.admin-form label {
+    margin-top: 8px;
+    font-weight: 700;
+}
+
+.admin-form input:not([type="checkbox"]),
+.admin-form input[type="file"],
+.admin-form select,
+.admin-form textarea {
+    width: 100%;
+    min-height: 45px;
+    padding: 10px 12px;
+    border: 1px solid #d9ccc0;
+    border-radius: 9px;
+    background: #fff;
+    color: var(--admin-text);
+    font: inherit;
+}
+
+.admin-form textarea {
+    resize: vertical;
+}
+
+.admin-form input:focus,
+.admin-form select:focus,
+.admin-form textarea:focus {
+    border-color: var(--admin-orange);
+    outline: 3px solid rgb(213 104 71 / 15%);
+}
+
+.checkbox-label {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+}
+
+.checkbox-label input {
+    width: 17px;
+    height: 17px;
+    accent-color: var(--admin-brown);
+}
+
+.muted {
+    color: var(--admin-muted);
+    font-size: 13px;
+    font-weight: 400;
+}
+
+.current-image {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: var(--admin-muted);
+}
+
+.current-image img {
+    width: 76px;
+    height: 76px;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+.form-actions {
+    justify-content: flex-start;
+    margin-top: 12px;
+}
+
+.alert {
+    margin-bottom: 18px;
+    padding: 13px 16px;
+    border-radius: 10px;
+}
+
+.alert-success {
+    background: #e8f5e9;
+    color: #256d35;
+}
+
+.alert-error {
+    background: #fff0ed;
+    color: #922d1d;
+}
+
+.alert-error ul {
+    margin: 0;
+    padding-left: 20px;
+}
+
+.login-card {
+    width: min(430px, 100%);
+    margin: 7vh auto 0;
+}
+
+.login-card .admin-form {
+    margin-top: 24px;
+}
+
+.back-link {
+    display: inline-block;
+    margin-top: 22px;
+    color: var(--admin-brown);
+    text-decoration: none;
+}
+
+@media (max-width: 700px) {
+    body.admin-body {
+        padding: 20px 12px;
+    }
+
+    .admin-header,
+    .panel-heading {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .header-actions {
+        flex-wrap: wrap;
+    }
+
+    .panel,
+    .login-card {
+        padding: 18px;
+    }
+
+    .product-table th,
+    .product-table td {
+        padding: 11px 8px;
+    }
+}
